@@ -7,4 +7,7 @@
     <string name="minutes">Minutes: </string>
     <string name="zero">0</string>
     <string name="emergencystop">EMERGENCY STOP</string>
+    <string name="alert_message">Are you sure you want to quit?</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
 </resources>

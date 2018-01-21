@@ -34,15 +34,6 @@
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="320dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button_stop"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:onClick="testingToSuccess"
-        android:text="Button" />
 </RelativeLayout>
 
 
