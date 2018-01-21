@@ -6,4 +6,5 @@
     <string name="hours">Hours: </string>
     <string name="minutes">Minutes: </string>
     <string name="zero">0</string>
+    <string name="emergencystop">EMERGENCY STOP</string>
 </resources>

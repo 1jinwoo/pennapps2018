@@ -47,12 +47,12 @@
         android:id="@+id/diamond"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_alignLeft="@+id/Success"
+        android:layout_alignStart="@+id/Success"
         android:layout_below="@+id/Success"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="47dp"
-        android:layout_toEndOf="@+id/back_botton"
-        android:layout_toRightOf="@+id/back_botton"
         app:srcCompat="@drawable/streakicon" />
 
     <TextView
@@ -60,9 +60,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/diamond"
+        android:layout_alignEnd="@+id/Success"
+        android:layout_alignRight="@+id/Success"
         android:layout_toEndOf="@+id/diamond"
         android:layout_toRightOf="@+id/diamond"
         android:text="0"
+        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="65sp" />
 
