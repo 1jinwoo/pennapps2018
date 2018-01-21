@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class PhocusMain extends AppCompatActivity {
 
         mTextViewCountdown = findViewById(R.id.text_view_countdown);
         timeLeftMS = START_IN_MS;
-        Log.d("debug","time: " + timeLeftMS);
+        Log.d("debug", "time: " + timeLeftMS);
         startTimer();
         mButtonEStop = findViewById(R.id.button_stop);
 
@@ -60,7 +61,7 @@ public class PhocusMain extends AppCompatActivity {
                 dialogButtonYes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent2 = new Intent (PhocusMain.this,ShameActivity.class);
+                        Intent intent2 = new Intent(PhocusMain.this, ShameActivity.class);
                         startActivity(intent2);
                     }
                 });
@@ -88,31 +89,37 @@ public class PhocusMain extends AppCompatActivity {
         running = true;
 
     }
+
     private void pauseTimer() {
         mCountDownTimer.cancel();
         running = false;
 
     }
 
-    private void updateCountdownText () {
+    private void updateCountdownText() {
         int tempTimeLeft = (int) timeLeftMS;
         int hours = tempTimeLeft / 3600000;
-        tempTimeLeft-= 3600000*hours;
-        int minutes = tempTimeLeft/ 60000;
-        tempTimeLeft -= 60000*minutes;
-        int seconds = tempTimeLeft/1000;
+        tempTimeLeft -= 3600000 * hours;
+        int minutes = tempTimeLeft / 60000;
+        tempTimeLeft -= 60000 * minutes;
+        int seconds = tempTimeLeft / 1000;
 
-        String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d:%02d",hours,minutes,seconds);
+        String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, minutes, seconds);
         mTextViewCountdown.setText(timeLeftFormatted);
     }
-<<<<<<< HEAD
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         // back button disabled
-=======
-    public void testingToSuccess(View v){
-        Intent intent2 = new Intent (this,SuccessActivity.class);
-        startActivity(intent2);
->>>>>>> 67fbafffcff1157fdc1792c00e3b2ade850d5fd3
+            Intent intent2 = new Intent(this, SuccessActivity.class);
+            startActivity(intent2);
     }
-}
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Log.i("TEST", "Home Button");  // here you'll have to do something to prevent the button to go to the home screen
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    }

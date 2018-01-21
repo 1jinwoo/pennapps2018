@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.content.Intent;
 import android.widget.TextView;
@@ -56,5 +57,14 @@ public class SuccessActivity extends AppCompatActivity {
 
     public void onBackPressed(){
         // back button disabled
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Log.i("TEST", "Home Button");  // here you'll have to do something to prevent the button to go to the home screen
+            
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

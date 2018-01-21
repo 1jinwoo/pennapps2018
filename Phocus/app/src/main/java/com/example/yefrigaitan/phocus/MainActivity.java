@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -84,5 +85,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBackPressed(){
         // intentionally left blank to disable back button
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Log.i("TEST", "Home Button");  // here you'll have to do something to prevent the button to go to the home screen
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

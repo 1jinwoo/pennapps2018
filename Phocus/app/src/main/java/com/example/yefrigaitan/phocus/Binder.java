@@ -61,12 +61,12 @@ public class Binder extends Service {
 
     private void handleBinderMode() {
         // is Binder Mode active?
-        //if(isBinderModeActive()) {
+        if(isBinderModeActive(ctx)) {
             // is App in background?
-            //if(isInBackground()) {
-                //restoreApp(); // restore!
-            //}
-        //}
+            if(isInBackground()) {
+                restoreApp(); // restore!
+            }
+        }
     }
 
     private boolean isInBackground() {
