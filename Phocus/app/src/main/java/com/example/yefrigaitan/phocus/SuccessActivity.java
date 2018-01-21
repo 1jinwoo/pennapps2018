@@ -53,4 +53,8 @@ public class SuccessActivity extends AppCompatActivity {
         streakText.setText("" + put);
 
     }
+
+    public void onBackPressed(){
+        // back button disabled
+    }
 }

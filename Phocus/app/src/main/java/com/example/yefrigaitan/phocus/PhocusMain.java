@@ -86,4 +86,7 @@ public class PhocusMain extends AppCompatActivity {
         mTextViewCountdown.setText(timeLeftFormatted);
     }
 
+    public void onBackPressed(){
+        // back button disabled
+    }
 }

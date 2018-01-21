@@ -80,4 +80,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PhocusMain.class);
         startActivity(intent);
     }
+
+
+    public void onBackPressed(){
+        // intentionally left blank to disable back button
+    }
 }
