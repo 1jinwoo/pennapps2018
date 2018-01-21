@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
         android:background="@color/SuccessText"
-        android:onClick="goToHome"
+        android:onClick="toHome"
         android:text="Go Back and try again"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textSize="18sp" />
