@@ -48,7 +48,7 @@ public class Binder extends Service {
                     try {
                         Thread.sleep(INTERVAL);
                     } catch (InterruptedException e) {
-                        Log.i(TAG, "Thread interrupted: 'KioskService'");
+                        Log.i(TAG, "Thread interrupted: 'Binder'");
                     }
                 }while(running);
                 stopSelf();
@@ -61,12 +61,12 @@ public class Binder extends Service {
 
     private void handleBinderMode() {
         // is Binder Mode active?
-        if(isBinderModeActive()) {
+        //if(isBinderModeActive()) {
             // is App in background?
-            if(isInBackground()) {
-                restoreApp(); // restore!
-            }
-        }
+            //if(isInBackground()) {
+                //restoreApp(); // restore!
+            //}
+        //}
     }
 
     private boolean isInBackground() {
